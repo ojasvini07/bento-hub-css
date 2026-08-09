@@ -1,26 +1,35 @@
-# 🍱 Bento Grid Dashboard Layout
+# 🍱 Bento Grid Dashboard
 
-A sleek, responsive, and modern Bento Grid hub built using pure **HTML5** and **CSS3**. Designed with dark mode aesthetics, glassmorphism card styling, CSS Grid, and custom CSS variables—**zero JavaScript required**.
+A modern, responsive Bento Grid dashboard built with pure **HTML5** and **CSS3**—featuring glassmorphism styling, ambient radial glows, and micro-interactions with **zero JavaScript**.
 
----
-
-## ✨ Features
-
-- **Modern Bento Layout:** Flexible asymmetric grid layout powered by CSS Grid.
-- **Pure CSS:** No heavy libraries, JavaScript, or external frameworks.
-- **Glassmorphism Design:** Dark mode styling with custom borders, backdrop blurs, and hover micro-interactions.
-- **Fully Responsive:** Adapts seamlessly across desktop, tablet, and mobile screens using media queries.
-- **CSS Variables:** Easy color palette and typography customization via `:root` properties.
+![CSS3](https://img.shields.io/badge/CSS3-Modern%20Grid%20%26%20Flexbox-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-None-lightgrey)
+![Progress](https://img.shields.io/badge/Update%20Streak-Day%201%20of%205-brightgreen)
 
 ---
 
-## 🛠️ Built With
+## 🛠️ 5-Day GitHub Update Roadmap
 
-- **HTML5:** Semantic structural markup.
-- **CSS3:** 
-  - CSS Grid (`grid-template-columns`, `span`)
-  - Flexbox layout alignment
-  - Keyframe animations (`@keyframes pulse`)
-  - Custom variables (`var(--accent-purple)`)
+- [x] **Day 1:** Dynamic 135° gradient border glows and hover micro-interactions
+- [ ] **Day 2:** Pure CSS Light / Dark mode theme toggle
+- [ ] **Day 3:** Floating glassmorphism navigation header
+- [ ] **Day 4:** Pure CSS modal pop-up card using `:target`
+- [ ] **Day 5:** Live deployment via GitHub Pages
 
 ---
+
+## ✨ Features (Day 1)
+
+- **Directional Gradient Glows:** Cards reveal an ambient 135° purple-to-blue gradient border and radial background backlight on hover.
+- **Micro-Interactions:** Smooth CSS transformations on tags, badges, and statistics numbers on hover.
+- **Pure CSS Grid:** Asymmetric bento layout using column and row spans.
+- **Glassmorphism Aesthetic:** Backdrop blur, subtle borders, and a dark mode color palette powered by CSS custom properties.
+
+---
+
+## 📂 File Structure
+
+```text
+├── index.html     # Semantic Bento Grid markup
+├── styles.css     # CSS Grid, custom variables, and Day 1 hover glows
+└── README.md      # Project documentation & streak tracker
