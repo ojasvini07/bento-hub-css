@@ -22,9 +22,11 @@ body {
   color: var(--text-main);
   min-height: 100vh;
   display: flex;
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .bento-grid {
@@ -36,6 +38,7 @@ body {
   max-width: 1000px;
 }
 
+/* Column/Row Spans */
 .span-col-2 { grid-column: span 2; }
 .span-col-3 { grid-column: span 3; }
 .span-col-4 { grid-column: span 4; }
@@ -55,10 +58,10 @@ body {
   backdrop-filter: blur(12px);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
               border-color 0.35s ease, 
-              box-shadow 0.35s ease;
+              box-shadow 0.35s ease,
+              background-color 0.3s ease;
 }
 
-/* Day 1 Update: Gradient Border Glow Effect */
 .bento-card::before {
   content: '';
   position: absolute;
@@ -80,7 +83,6 @@ body {
   pointer-events: none;
 }
 
-/* Day 1 Update: Ambient Radial Glow Behind Card Content */
 .bento-card::after {
   content: '';
   position: absolute;
@@ -99,7 +101,6 @@ body {
   pointer-events: none;
 }
 
-/* Hover Transformations */
 .bento-card:hover {
   transform: translateY(-6px) scale(1.01);
   border-color: transparent;
@@ -223,6 +224,65 @@ body {
   0% { opacity: 1; }
   50% { opacity: 0.4; }
   100% { opacity: 1; }
+}
+
+body:has(#theme-toggle:checked) {
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-hover-border: rgba(0, 0, 0, 0.2);
+  --text-main: #111827;
+  --text-muted: #6b7280;
+}
+
+body:has(#theme-toggle:checked) .bento-card:hover {
+  box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.15);
+}
+
+body:has(#theme-toggle:checked) .tag {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body:has(#theme-toggle:checked) .bento-card:hover .tag {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 99px;
+  cursor: pointer;
+  user-select: none;
+  backdrop-filter: blur(12px);
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--card-hover-border);
+}
+
+.theme-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.sun-icon {
+  display: none;
+}
+
+#theme-toggle:checked + .theme-toggle-btn .moon-icon {
+  display: none;
+}
+
+#theme-toggle:checked + .theme-toggle-btn .sun-icon {
+  display: inline-block;
 }
 
 @media (max-width: 850px) {
