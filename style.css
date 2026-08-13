@@ -239,6 +239,14 @@ body {
   border: none;
 }
 
+.card-footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .status-badge {
   display: inline-flex;
   align-items: center;
@@ -257,6 +265,23 @@ body {
   background-color: #4ade80;
   border-radius: 50%;
   animation: pulse 2s infinite;
+}
+
+.modal-trigger-btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-purple);
+  text-decoration: none;
+  padding: 0.3rem 0.75rem;
+  border-radius: 99px;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-trigger-btn:hover {
+  background: rgba(139, 92, 246, 0.25);
+  transform: translateY(-1px);
 }
 
 .quote-text {
@@ -284,6 +309,89 @@ body {
   100% { opacity: 1; }
 }
 
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Modal trigger when URL hash matches element ID */
+.modal-overlay:target {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: var(--bg-color);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  padding: 2rem;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transform: scale(0.92) translateY(10px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay:target .modal-card {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.modal-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.75rem 0;
+}
+
+.modal-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.modal-description code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  color: var(--accent-purple);
+}
+
 body:has(#theme-toggle:checked) {
   --bg-color: #f3f4f6;
   --card-bg: #ffffff;
@@ -303,6 +411,14 @@ body:has(#theme-toggle:checked) .tag {
 
 body:has(#theme-toggle:checked) .bento-card:hover .tag {
   background: rgba(0, 0, 0, 0.1);
+}
+
+body:has(#theme-toggle:checked) .modal-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+body:has(#theme-toggle:checked) .modal-close {
+  background: rgba(0, 0, 0, 0.06);
 }
 
 .theme-toggle-btn {
@@ -329,6 +445,7 @@ body:has(#theme-toggle:checked) .bento-card:hover .tag {
   color: var(--text-main);
 }
 
+/* Sun/Moon Icon Toggle */
 .sun-icon {
   display: none;
 }
@@ -359,7 +476,7 @@ body:has(#theme-toggle:checked) .bento-card:hover .tag {
     padding: 0.6rem 1rem;
   }
   .nav-title {
-    display: none; /* Hide text title on small mobile screens */
+    display: none;
   }
   .bento-grid {
     grid-template-columns: 1fr;
