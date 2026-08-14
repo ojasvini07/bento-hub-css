@@ -4,7 +4,13 @@ A modern, responsive Bento Grid dashboard built with pure **HTML5** and **CSS3**
 
 ![CSS3](https://img.shields.io/badge/CSS3-Modern%20Grid%20%26%20Flexbox-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-None-lightgrey)
-![Progress](https://img.shields.io/badge/Update%20Streak-Day%204%20of%205-brightgreen)
+![Progress](https://img.shields.io/badge/Update%20Streak-Day%205%20of%205%20Completed-brightgreen)
+
+---
+
+## 🌐 Live Demo
+
+👉 **[View Live Site](https://YOUR-USERNAME.github.io/bento-grid-dashboard/)** *(Replace with your actual GitHub Pages URL)*
 
 ---
 
@@ -14,7 +20,7 @@ A modern, responsive Bento Grid dashboard built with pure **HTML5** and **CSS3**
 - [x] **Day 2:** Pure CSS Light / Dark mode theme toggle using `:has()`
 - [x] **Day 3:** Floating glassmorphism navigation header & brand avatar
 - [x] **Day 4:** Pure CSS modal pop-up card using `:target` selector
-- [ ] **Day 5:** Live deployment via GitHub Pages
+- [x] **Day 5:** Live deployment via GitHub Pages & final polish
 
 ---
 
@@ -34,4 +40,4 @@ A modern, responsive Bento Grid dashboard built with pure **HTML5** and **CSS3**
 ```text
 ├── index.html     # Semantic Bento Grid markup, navbar header, modal overlay, & theme toggle
 ├── styles.css     # CSS Grid, floating navbar, modal :target styles, theme variables, & hover glows
-└── README.md      # Project documentation & streak tracker
+└── README.md      # Project documentation, live demo link, & streak tracker
