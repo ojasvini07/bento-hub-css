@@ -10,7 +10,7 @@ A modern, responsive Bento Grid dashboard built with pure **HTML5** and **CSS3**
 
 ## 🌐 Live Demo
 
-👉 **[View Live Site](https://YOUR-USERNAME.github.io/bento-grid-dashboard/)** *(Replace with your actual GitHub Pages URL)*
+👉(https://ojasvini07.github.io/bento-hub-css/)
 
 ---
 
