@@ -8,12 +8,6 @@ A modern, responsive Bento Grid dashboard built with pure **HTML5** and **CSS3**
 
 ---
 
-## 🌐 Live Demo
-
-👉(https://ojasvini07.github.io/bento-hub-css/)
-
----
-
 ## 🛠️ 5-Day GitHub Update Roadmap
 
 - [x] **Day 1:** Dynamic 135° gradient border glows and hover micro-interactions
