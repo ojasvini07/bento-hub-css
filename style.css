@@ -96,7 +96,6 @@ body {
   max-width: 1000px;
 }
 
-/* Column/Row Spans */
 .span-col-2 { grid-column: span 2; }
 .span-col-3 { grid-column: span 3; }
 .span-col-4 { grid-column: span 4; }
@@ -267,6 +266,15 @@ body {
   animation: pulse 2s infinite;
 }
 
+.status-complete {
+  background: rgba(139, 92, 246, 0.15);
+  color: #c084fc;
+}
+
+.status-complete .status-dot {
+  background-color: #c084fc;
+}
+
 .modal-trigger-btn {
   font-size: 0.85rem;
   font-weight: 600;
@@ -325,7 +333,6 @@ body {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Modal trigger when URL hash matches element ID */
 .modal-overlay:target {
   opacity: 1;
   visibility: visible;
@@ -445,7 +452,6 @@ body:has(#theme-toggle:checked) .modal-close {
   color: var(--text-main);
 }
 
-/* Sun/Moon Icon Toggle */
 .sun-icon {
   display: none;
 }
